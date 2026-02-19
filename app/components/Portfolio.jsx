@@ -1,7 +1,3 @@
-
-
-
-
 import IntroCard from './IntroCard';
 import TechStackCard from './TechStackCard';
 import ProjectCard from './ProjectCard';
