@@ -1,67 +1,45 @@
 @import "tailwindcss";
 
-/* THEME COLORS */
-
+/* THEME COLORS (Keeping these) */
 :root {
-  --bg: #f8fafc;
-  --card: rgba(255,255,255,0.6);
-  --text: #020617;
-  --border: rgba(0,0,0,0.08);
-  --spot: rgba(0,0,0,0.08);
+  --bg: #ffffff;
+  --text: #0f172a;
+  --card: rgba(241, 245, 249, 0.7);
+  --border: rgba(0, 0, 0, 0.08);
+  --spot: rgba(0, 0, 0, 0.03);
 }
 
 .dark {
   --bg: #020617;
-  --card: rgba(255,255,255,0.05);
+  --card: rgba(15, 23, 42, 0.6);
   --text: #e5e7eb;
-  --border: rgba(255,255,255,0.08);
-  --spot: rgba(255,255,255,0.08);
+  --border: rgba(255, 255, 255, 0.05);
+  --spot: rgba(255, 255, 255, 0.03);
 }
 
 body {
-  background: var(--bg);
+  background-color: var(--bg);
   color: var(--text);
-  transition: 0.4s;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Dashing typography tweak */
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
 
-/* MOUSE SPOTLIGHT */
-
-.spotlight {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background: radial-gradient(
-    700px circle at var(--x) var(--y),
-    var(--spot),
-    transparent 40%
-  );
-}
-
-/* GRADIENT MESH */
-
-.mesh {
-  position: fixed;
-  inset: -40%;
-  z-index: 0;
-  filter: blur(120px);
-  opacity: 0.5;
-  background:
-    radial-gradient(circle at 20% 30%, #3b82f6, transparent 40%),
-    radial-gradient(circle at 80% 70%, #6366f1, transparent 40%),
-    radial-gradient(circle at 40% 80%, #8b5cf6, transparent 40%);
-}
-
-/* GLASS CARD */
-
+/* DASHING INTERACTIVE ELEMENTS */
 .glass {
   background: var(--card);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* MAGNETIC BUTTON */
+.glass:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.1);
+}
 
-.magnetic {
-  transition: transform 0.2s ease;
+/* Reduced mesh blur for a cleaner look */
+.mesh {
+  filter: blur(150px);
 }
