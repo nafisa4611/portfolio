@@ -94,7 +94,7 @@ export default function Page() {
           >
             <MagneticButton>
               <a href="#contact" className="px-8 py-4 bg-[var(--text)] text-[var(--bg)] font-bold rounded-full hover:opacity-90 transition-all flex items-center gap-2">
-                Let's Connect
+                Let&apos;s Connect
               </a>
             </MagneticButton>
 
@@ -168,7 +168,7 @@ export default function Page() {
                         <h3 className="text-2xl font-bold text-[var(--text)] mt-1">Frontend Engineer</h3>
                         <p className="text-[var(--text)]/70 font-medium">Code Prophet • Jan 2026 – Present</p>
                     </div>
-                    {/* IMPROVED: Technical Metric Visualization */}
+                 
                     <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold">
                         <Zap size={14} />
                         Lighthouse 98
