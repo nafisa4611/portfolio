@@ -4,13 +4,12 @@ import { motion } from "framer-motion";
 import BackgroundFX from "./components/BackgroundFX";
 import MagneticButton from "./components/MagneticButton";
 import Navbar from "./components/Navbar";
-import { ArrowUpRight, Zap } from "lucide-react"; // Imported Zap for the metric
+import { ArrowUpRight, Zap } from "lucide-react";
 import Contact from "./components/Contact";
 
 const projects = [
   {
     title: "World Mart",
-    // IMPROVED: Added specific technical challenge/implementation
     desc: "A full-scale e-commerce engine utilizing Stripe edge-function webhooks for secure, asynchronous payment processing and optimistic UI updates.",
     link: "https://world-mart-eight.vercel.app/",
     tags: ["Next.js", "TypeScript", "Stripe", "Tailwind"],
@@ -18,7 +17,6 @@ const projects = [
   },
   {
     title: "Finance Dashboard",
-    // IMPROVED: Added specific technical challenge/implementation
     desc: "Real-time SaaS analytics implementing server-side caching and complex data visualization with Recharts.",
     link: "https://dashboard-ui-three-drab.vercel.app",
     tags: ["Recharts", "Next.js", "Lucide"],
@@ -26,7 +24,6 @@ const projects = [
   },
   {
     title: "ID Card Generator",
-    // IMPROVED: Added specific technical challenge/implementation
     desc: "Automation tool for high-volume asset generation using ExcelJS and Canvas API for client-side rendering.",
     link: "https://id-card-generator-beta.vercel.app",
     tags: ["ExcelJS", "Canvas API"],
@@ -34,7 +31,6 @@ const projects = [
   },
   {
     title: "Protivious Landing",
-    // IMPROVED: Added specific technical challenge/implementation
     desc: "High-performance marketing site focusing on micro-interactions using Framer Motion and GSAP.",
     link: "https://postivus-landing-page-henna.vercel.app",
     tags: ["Framer Motion", "GSAP"],
@@ -52,7 +48,7 @@ export default function Page() {
         
         {/* HERO SECTION */}
         <section className="relative pt-10 pb-10 text-center space-y-8">
-          {/* ... (Status Badge remains same) ... */}
+          {/* ...Status Badge... */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
