@@ -5,19 +5,27 @@ import { Sun, Moon } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState(() => {
-    if (typeof window === "undefined") return "dark";
-    return localStorage.getItem("theme") || "dark";
-  });
-  const [mounted, setMounted] = useState(() => typeof window !== "undefined");
+  // 1. Initialize theme as a default to avoid server/client mismatch
+  const [theme, setTheme] = useState("dark");
+  
+  // 2. IMPORTANT: Start with false so server and client match initially
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    if (theme === "dark") {
+    // 3. Once component mounts on client, set mounted to true
+    setMounted(true);
+    
+    // 4. Safely check localStorage only on the client
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    setTheme(savedTheme);
+    
+    // Apply class to html tag
+    if (savedTheme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
-  }, [theme]);
+  }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
@@ -31,6 +39,7 @@ export default function ThemeToggle() {
     }
   };
 
+  // 5. Render placeholder if not mounted
   if (!mounted) return <div className="h-10 w-20" />;
 
   return (

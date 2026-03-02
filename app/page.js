@@ -9,6 +9,13 @@ import Contact from "./components/Contact";
 
 const projects = [
   {
+    title: "Math Adventure",
+    desc: "A gamified math problem generator for kids, utilizing Vue 3, Pinia for state management, and Tailwind CSS with custom theme animations.",
+    link: "https://kids-math-app-theta.vercel.app/",
+    tags: ["Vue 3", "Pinia", "TypeScript", "Tailwind"],
+    size: "md:col-span-2",
+  },
+  {
     title: "World Mart",
     desc: "A full-scale e-commerce engine utilizing Stripe edge-function webhooks for secure, asynchronous payment processing and optimistic UI updates.",
     link: "https://world-mart-eight.vercel.app/",
