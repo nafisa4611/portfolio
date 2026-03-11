@@ -16,6 +16,13 @@ const projects = [
     size: "md:col-span-2",
   },
   {
+    title: "The Kitchen Directory",
+    desc: "A high-end editorial recipe engine featuring ISR (Incremental Static Regeneration) for lightning-fast performance and a typography-first magazine aesthetic.",
+    link: "https://recipe-app-six-pi-79.vercel.app/", 
+    tags: ["Next.js 15", "ISR", "Tailwind CSS", "API Routes"],
+    size: "md:col-span-2",
+  },
+  {
     title: "World Mart",
     desc: "A full-scale e-commerce engine utilizing Stripe edge-function webhooks for secure, asynchronous payment processing and optimistic UI updates.",
     link: "https://world-mart-eight.vercel.app/",
